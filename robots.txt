@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /script_backup.js
+
+Sitemap: https://bbedu-couponcode.netlify.app/sitemap.xml
