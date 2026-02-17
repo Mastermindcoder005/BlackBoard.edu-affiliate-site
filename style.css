@@ -112,7 +112,7 @@ p {
 }
 
 section {
-  padding: 120px 0;
+  padding: 45px 0;
 }
 
 /* Navbar */
@@ -133,6 +133,13 @@ nav {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+@media (min-width: 1024px) {
+  nav {
+    padding-inline: 120px;
+  }
+}
+
 
 nav .menu-items {
   display: flex;
@@ -247,7 +254,7 @@ nav .menu-items .btn:hover {
 
 /* Hero Section */
 .hero {
-  height: 120vh;
+  height: 90vh;
   max-height: 720px;
   min-height: 420px;
   display: flex;
@@ -380,9 +387,11 @@ section .heading-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
+  margin-top: -25px;
 }
 
 .services-container .service {
+  position: relative;
   box-shadow: 0 4px 15px rgba(99, 96, 64, 0.1);
   background-color: #0f0f0f;
   border-radius: 14px;
@@ -391,6 +400,17 @@ section .heading-container {
   transform: translateZ(0);
   will-change: transform, box-shadow;
   transition: transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+/* Stretched Link Pattern */
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
 }
 
 .services-container .content {
@@ -431,6 +451,8 @@ section .heading-container {
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
+  position: relative;
+  z-index: 2;
 }
 
 .service-btn:hover {
@@ -491,6 +513,8 @@ section .heading-container {
   justify-content: center;
   align-items: center;
   margin-top: 8px;
+  position: relative;
+  z-index: 2;
 }
 
 .coupon-text {
@@ -885,7 +909,7 @@ footer .copyright {
   }
 
   section {
-    padding: 80px 0;
+    padding: 30px 0;
   }
 
   h1 {
@@ -906,8 +930,10 @@ footer .copyright {
   }
 
   .hero {
-    min-height: 500px;
-    padding: 20px 0;
+    min-height: 400px;
+    max-height: 550px;
+    padding-top: 100px;
+    align-items: flex-start;
   }
 
   .hero h1 {
@@ -1007,6 +1033,12 @@ footer .copyright {
   .btn-outline {
     padding: 10px 24px;
     font-size: 15px;
+  }
+
+  .hero {
+    min-height: 380px;
+    max-height: 550px;
+    padding-top: 90px;
   }
 
   h2 {
